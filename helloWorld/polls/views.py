@@ -22,3 +22,8 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
+
+def single_point_map(request, lat, long):
+    context = {'lat': float(lat)}
+    context['long'] = float(long)
+    return render(request, 'polls/single_point_map.html', context)

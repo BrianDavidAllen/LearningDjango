@@ -1,3 +1,15 @@
+{% load leaflet_tags %}
+
+<head>
+    {% leaflet_js %}
+    {% leaflet_css %}
+</head>
+
+<body>
+    {% leaflet_map "yourmap" %}
+</body>
+
+
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
